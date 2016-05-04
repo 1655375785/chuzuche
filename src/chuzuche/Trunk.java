@@ -7,7 +7,7 @@ public class Trunk extends Vehicle{
 		super(Name);		
 	}
 	private int seatCount=0;
-	public void  rentFee(){
+	public double   rentFee(int day){
 //		Scanner input=new Scanner(System.in);
 //		seatCount=input.nextInt();
 		if (seatCount>=16) {
@@ -15,6 +15,7 @@ public class Trunk extends Vehicle{
 		}else{
 			setFee(800);
 		}
+		return super.rentFee(day);
 	}
 	public int getSeatCount() {
 		return seatCount;

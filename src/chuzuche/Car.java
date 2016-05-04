@@ -3,25 +3,34 @@ package chuzuche;
 import java.util.Scanner;
 
 public class Car extends Vehicle{
+	private String[] type={"别克商务","宝马550i","奥迪"};
 	Scanner input=new Scanner(System.in);
-//	public Car(String Name){
-//		super(Name);
-//	}
-	public void rentfee(int num){
-		if (num==1) {
-			setName("别克商务");
+//	private int fee;
+	public Car(String motoNo){
+		super(motoNo);
+	}
+
+	public double rentFee(int day){
+		if (type.equals("别克商务" )) {
 			setFee(600);
-			return ;
-		}else if(num==2){
-			setName("宝马550i");
-			setFee(500);
-		}else if(num==3){
-			setName("奥迪");
-			setFee(300);
-			}else{
-				System.out.println("shurucuowu");
-			}
-		}
 		
+		}else if(type.equals("宝马550i")){
+			
+			setFee(600);
+		}else {
+			
+			setFee(300);
+			}
+		return super.rentFee(day);
+		}
+
+	public String[] getType() {
+		return type;
+	}
+
+	public void setType(String[] type) {
+		this.type = type;
+	}
+
 
 }

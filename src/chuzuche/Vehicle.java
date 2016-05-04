@@ -3,26 +3,30 @@ package chuzuche;
 import java.util.Scanner;
 
 public abstract class Vehicle {
-	private String Name;
-	private int fee; 
-//	public Vehicle(String Name){
-//		this.Name=Name;
-//	}
-	public abstract void rentfee(int num);
-    public int rentFee(int day){
-    	return fee*day;
-    }
-	public String getName() {
-		return Name;
+	private String motoNo;
+	private double fee; 
+	public Vehicle(String motoNo){
+		this.motoNo=motoNo;
 	}
-	public void setName(String name) {
-		Name = name;
+    public double rentFee(int day){ 
+    		return day * fee; 
+    	 	} 
+
+
+	public String getMotoNo() {
+		return motoNo;
 	}
-	public int getFee() {
+
+	public void setMotoNo(String motoNo) {
+		this.motoNo = motoNo;
+	}
+
+	public double getFee() {
 		return fee;
 	}
 	public void setFee(int fee) {
 		this.fee = fee;
+		
 	}
 
 
