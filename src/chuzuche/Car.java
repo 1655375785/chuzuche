@@ -4,25 +4,24 @@ import java.util.Scanner;
 
 public class Car extends Vehicle{
 	Scanner input=new Scanner(System.in);
-	public void  showName(int a){
-		switch (a) {
-		case 1:
+//	public Car(String Name){
+//		super(Name);
+//	}
+	public void rentfee(int num){
+		if (num==1) {
 			setName("别克商务");
-			break;
-		case 2:
+			setFee(600);
+			return ;
+		}else if(num==2){
 			setName("宝马550i");
-			break;
-		case 3:
-			setName("别克林荫大道");
-			break;
-
-		default:
-			break;
+			setFee(500);
+		}else if(num==3){
+			setName("奥迪");
+			setFee(300);
+			}else{
+				System.out.println("shurucuowu");
+			}
 		}
 		
-	}
-	public void showMoney(int a){
-		int []money={600,500,300};
-		setZuMoney(money[a-1]);
-	}
+
 }
