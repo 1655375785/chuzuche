@@ -3,8 +3,9 @@ package chuzuche;
 import java.util.Scanner;
 
 public class Trunk extends Vehicle{
-	public Trunk(String Name) {
-		super(Name);		
+	public Trunk(String motoNo,String typ) {
+		super(motoNo);
+		this.seatCount=seatCount;
 	}
 	private int seatCount=0;
 	public double   rentFee(int day){
